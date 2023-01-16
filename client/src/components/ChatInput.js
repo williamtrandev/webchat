@@ -29,14 +29,6 @@ function ChatInput({handleSendMsg}) {
                     value={msg}
                     onChange={(e) => setMsg(e.target.value)}
                 ></input>
-                {/* <div className="relative">
-	                <MdInsertEmoticon
-	                    className="text-[1.5rem]"
-	                    onClick={() => setShowEmojiPicker(!showEmojiPicker)}
-						onBlur={()=>setShowEmojiPicker(false)}
-	                ></MdInsertEmoticon>
-	                {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} className="absolute top-0"/>}
-	            </div> */}
 
                 <button
                     type="submit"

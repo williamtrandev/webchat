@@ -17,8 +17,10 @@ app.use("/api/auth", userRoutes);
 app.use("/api/messages", messageRoute);
 // localhost:27017/chat
 // console.log(process.env.MONGO_URL);
+const URI = `mongodb+srv://trantanthanh:${process.env.MONGO_PASSWORD}@cluster0.2zeauks.mongodb.net/?retryWrites=true&w=majority`;
+mongoose.set("strictQuery", false);
 mongoose
-    .connect("mongodb://127.0.0.1:27017/chat", {
+    .connect(URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
@@ -30,7 +32,8 @@ mongoose
         console.log(1);
     });
 
-const server = app.listen(process.env.PORT, () => {
+const PORT = process.env.PORT || 4000;
+const server = app.listen(PORT, () => {
     console.log(`Server started on PORT ${process.env.PORT}`);
 });
 

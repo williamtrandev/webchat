@@ -61,7 +61,8 @@ function Chat() {
     const handleChatChange = (chat) => {
         setCurrentChat(chat);
     };
-    console.log(contacts);
+    console.log("contacts", contacts);
+    console.log(currentUser);
     // console.log(currentUser.avatarImage);
     const handleLogOut = async () => {
         localStorage.removeItem("chat-app-user");

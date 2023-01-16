@@ -39,8 +39,8 @@ function ChatContainer({ currentChat, currentUser, socket }) {
     useEffect(() => {
         const getAllMessages = async () => {
             const response = await axios.post(getMessageRoute, {
-                from: currentUser._id,
-                to: currentChat._id,
+                from: currentUser?._id,
+                to: currentChat?._id,
             });
             setMessages(response.data);
         };
@@ -55,7 +55,7 @@ function ChatContainer({ currentChat, currentUser, socket }) {
                             <div className="avatar">
                                 <img
                                     src={currentChat?.avatarImage}
-                                    className="w-[3.5rem] h-[3.5rem] rounded-[50%]"
+                                    className="w-[3.5rem] h-[3.5rem] rounded-[50%] object-cover"
                                 ></img>
                             </div>
                             <div className="username">

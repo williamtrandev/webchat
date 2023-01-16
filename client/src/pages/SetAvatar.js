@@ -41,8 +41,8 @@ function SetAvatar() {
         const { data } = await axios.post(`${setAvatarRoute}/${user._id}`, {
             image: ava,
         });
-        user.isAvatarImageSet = true;
-        user.avatarImage = data.image;
+        user.isAvatarImageSet = false;
+        user.avatarImage = ava;
         localStorage.setItem("chat-app-user", JSON.stringify(user));
         navigate("/chat");
     };
