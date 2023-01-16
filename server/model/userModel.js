@@ -24,7 +24,8 @@ const userSchema = new mongoose.Schema({
     },
     avatarImage: {
         type: String,
-        default: "",
+        default:
+            "https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg",
     },
 });
 module.exports = mongoose.model("Users", userSchema);
