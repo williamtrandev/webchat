@@ -1,0 +1,52 @@
+.navbar {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px 0px;
+}
+.light {
+    background: #fafafa;
+}
+.light .toggle {
+    background: linear-gradient(145deg, #e1e1e1, #fff);
+    box-shadow: 3px 3px 4px #e6e6e6, -3px -3px 4px #ffffff;
+}
+.light .iconSun {
+    color: #fafafa;
+}
+.light .iconMoon {
+    color: #151d2a;
+}
+.light .spanBall {
+    background: #151d2a;
+}
+
+.dark {
+    background: #18202d;
+}
+.dark div {
+    border-color: rgba(226, 196, 225,0.2);
+}
+
+.dark .toggle {
+    background: #151d2a;
+    box-shadow: 3px 3px 4px #0e131b, -3px -3px 4px #1c2739;
+}
+
+.dark .iconSun {
+    color: #fafafa;
+}
+.dark .iconMoon {
+    color: #151d2a;
+}
+.dark .spanBall {
+    background: #fafafa;
+    transform: translateX(50px);
+}
+
+.dark p, .dark h1,.dark h3,.dark .iconLogOut,.dark .iconSend, .dark input {
+    color: white;
+}
+/* .light p, .light h1,.light h3,.light .iconLogOut,.light .iconSend {
+    color: black;
+} */
+.dark .selected {
+    background-color: rgba(128, 128, 128, 0.2);
+}
